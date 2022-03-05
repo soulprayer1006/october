@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.october.wiki.mapper.TestMapper">
+
+    <select id="list" resultType="com.october.wiki.entity.TestEntity">
+--         insert into `test`(id, name, password)
+--         values (1, '测试', '123456');
+        select `id`, `name`, `password`
+        from `test`;
+    </select>
+
+
+</mapper>
