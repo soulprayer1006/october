@@ -1,4 +1,4 @@
-package com.october.wiki.config;
+package com.october.wiki.common.config;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
@@ -10,8 +10,8 @@ import org.springframework.context.annotation.Configuration;
 
 @Slf4j
 @Configuration
-@MapperScan(value = {"com.example.october.mapper"})
-public class MyBatisPlusconfig {
+@MapperScan(value = {"com.october.wiki.modules.system.mapper"})
+public class MyBatisPlusConfig {
     /**
      * 新的分页插件,一缓和二缓遵循mybatis的规则,需要设置 MybatisConfiguration#useDeprecatedExecutor = false 避免缓存出现问题
      * 新多租户插件配置,一缓和二缓遵循mybatis的规则,需要设置 MybatisConfiguration#useDeprecatedExecutor = false 避免缓存万一出现问题
