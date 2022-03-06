@@ -3,6 +3,7 @@ package com.october.wiki.controller;
 import com.october.wiki.entity.TestEntity;
 import com.october.wiki.service.TestService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,5 +24,6 @@ public class TestController {
     public List<TestEntity> list() {
         return testService.list();
     }
+
 
 }
