@@ -8,11 +8,11 @@
         <version>2.6.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.October</groupId>
-    <artifactId>Wiki</artifactId>
+    <groupId>com.example</groupId>
+    <artifactId>test4</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>October</name>
-    <description>October</description>
+    <name>test4</name>
+    <description>test4</description>
     <properties>
         <java.version>11</java.version>
     </properties>
@@ -32,25 +32,17 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!-- 集成热部署-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-        </dependency>
-
-        <!-- 数据库框架及插件 -->
+        <!--        数据库框架及其插件-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
             <version>3.5.0</version>
         </dependency>
-        <!-- 由于mybatis-plus集成了mybatis,所以不需要额外引入mybatis的starter包-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.5.1</version>
         </dependency>
-
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -66,14 +58,11 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.79</version>
         </dependency>
-        <!--一个工具包，不需要自己再去额外的写工具类 https://www.hutool.cn/docs/#/ -->
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>5.7.20</version>
         </dependency>
-
-
 
     </dependencies>
 
@@ -90,30 +79,6 @@
                         </exclude>
                     </excludes>
                 </configuration>
-            </plugin>
-
-
-
-
-
-
-
-            <plugin>
-                <groupId>org.mybatis.generator</groupId>
-                <artifactId>mybatis-generator-maven-plugin</artifactId>
-                <version>1.4.0</version>
-                <configuration>
-                    <configurationFile>src/main/resources/generator/generator-config.xml</configurationFile>
-                    <overwrite>true</overwrite>
-                    <verbose>true</verbose>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>mysql</groupId>
-                        <artifactId>mysql-connector-java</artifactId>
-                        <version>8.0.22</version>
-                    </dependency>
-                </dependencies>
             </plugin>
         </plugins>
     </build>

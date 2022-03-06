@@ -1,3 +1,0 @@
-GET http://localhost:1008/hello
-Accept: application/json
-
