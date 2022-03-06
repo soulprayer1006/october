@@ -50,15 +50,8 @@ public class ShiroConfig {
         filters.put("oauth2", new Oauth2Filter());
         shiroFilterFactoryBean.setFilters(filters);
         Map<String, String> filterMap = new LinkedHashMap<>();
-        filterMap.put("/auth/register", "anon");
-        filterMap.put("/auth/login", "anon");
-        filterMap.put("/auth/account/sms", "anon");
-        filterMap.put("/auth/2step-code", "anon");
-        filterMap.put("/hik/**", "anon");
-        filterMap.put("/swagger*/**", "anon");
-        filterMap.put("/v2/**", "anon");
-        filterMap.put("/doc.html", "anon");
-        filterMap.put("/webjars/**", "anon");
+        filterMap.put("/account/register", "anon");
+        filterMap.put("/account/login", "anon");
         //以上字段都放行，其余的都进行拦截。
         filterMap.put("/**", "oauth2");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterMap);
